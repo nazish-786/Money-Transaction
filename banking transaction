@@ -1,0 +1,51 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int cb, wm, dm, pin1 = 1234, pin2, i, c, e, balance = 200;
+    printf("welcome the ICC BANK\n");
+    printf("enter the pin:");
+    scanf("%d", &pin2);
+    while (pin1 != pin2)
+    {
+        printf("wrong pin\ntry again");
+        printf("\nenter the pin:");
+        scanf("%d", &pin2);
+    }
+    do
+    {
+        printf("ENTER-1 to check the balance\nENTER-2 to withdraw the money\nENTER-3 to debit the money\nENTER-4 to exit\n");
+        printf("please enter the following options\n");
+        scanf("%d", &i);
+        switch (i)
+        {
+        case 1:
+            printf("balance=200\n");
+            //  scanf("%d",&cb);
+            break;
+
+        case 2:
+            printf("enter withdraw the money\n");
+            scanf("%d", &wm);
+            c = balance - wm;
+            printf("current balance is %d\n", c);
+            break;
+
+        case 3:
+            printf("enter debit the money\n");
+            scanf("%d", &dm);
+            e = balance + dm;
+            printf("current balance is %d\n", e);
+            break;
+
+        case 4:
+            break;
+
+        default:
+            printf("enter value is invalid\n");
+        }
+
+    } while (i != 4);
+    return 0;
+}
